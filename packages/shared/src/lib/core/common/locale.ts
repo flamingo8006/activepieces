@@ -5,6 +5,7 @@ export enum LocalesEnum {
     FRENCH = 'fr',
     SPANISH = 'es',
     JAPANESE = 'ja',
+    KOREAN = 'ko',
     CHINESE_SIMPLIFIED = 'zh',
     PORTUGUESE = 'pt',
     ARABIC = 'ar',
