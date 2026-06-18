@@ -37,6 +37,9 @@ const ThirdPartyLogin = React.memo(
       ApFlagId.THIRD_PARTY_AUTH_PROVIDER_REDIRECT_URL,
     );
     const { data: edition } = flagsHooks.useFlag<ApEdition>(ApFlagId.EDITION);
+    const { data: showDgistSso } = flagsHooks.useFlag<boolean>(
+      ApFlagId.SHOW_DGIST_SSO,
+    );
     const isCloud = edition === ApEdition.CLOUD;
     const thirdPartyLogin = oauth2Utils.useThirdPartyLogin();
     const { capture } = useTelemetry();
@@ -117,6 +120,17 @@ const ThirdPartyLogin = React.memo(
             {isSignUp
               ? `${t(`Sign up With`)} ${t('SAML')}`
               : `${t(`Sign in With`)} ${t('SAML')}`}
+          </Button>
+        )}
+        {showDgistSso && (
+          <Button
+            variant="outline"
+            className="w-full rounded-sm"
+            onClick={() => {
+              window.location.href = '/api/v1/authn/dgist/login';
+            }}
+          >
+            {isSignUp ? t('Sign up with DGIST') : t('Sign in with DGIST')}
           </Button>
         )}
       </div>

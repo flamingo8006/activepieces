@@ -16,6 +16,7 @@ import { setPlatformOAuthService } from './app-connection/app-connection-service
 import { appConnectionModule } from './app-connection/app-connection.module'
 import { platformAppConnectionModule } from './app-connection/platform-app-connection.module'
 import { authenticationModule } from './authentication/authentication.module'
+import { dgistSsoModule } from './authentication/dgist-sso/dgist-sso.module'
 import { canaryRoutingMiddleware } from './core/canary/canary-routing.middleware'
 import { collaborativeModule } from './core/collaborative/collaborative.module'
 import { oidcModule } from './core/security/oidc/oidc.module'
@@ -219,6 +220,7 @@ export const setupApp = async (app: FastifyInstance): Promise<FastifyInstance> =
     await app.register(openapiModule)
     await app.register(appEventRoutingModule)
     await app.register(authenticationModule)
+    await app.register(dgistSsoModule)
     await app.register(triggerModule)
     await app.register(platformModule)
     await app.register(humanInputModule)

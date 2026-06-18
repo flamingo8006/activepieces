@@ -1986,5 +1986,7 @@
   "1 min ago": "1 min ago",
   "{count} mins ago": "{count} mins ago",
   "1 hour ago": "1 hour ago",
-  "{count} hours ago": "{count} hours ago"
+  "{count} hours ago": "{count} hours ago",
+  "Sign in with DGIST": "Sign in with DGIST",
+  "Sign up with DGIST": "Sign up with DGIST"
 }
