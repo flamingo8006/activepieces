@@ -178,9 +178,19 @@ const AuthFormTemplate = React.memo(
     const redirectAfterLogin = useRedirectAfterLogin();
     const [showCheckYourEmailNote, setShowCheckYourEmailNote] = useState(false);
     const [showSamlLogin, setShowSamlLogin] = useState(false);
+    const [showAdminLogin, setShowAdminLogin] = useState(false);
     const { data: isEmailAuthEnabled } = flagsHooks.useFlag<boolean>(
       ApFlagId.EMAIL_AUTH_ENABLED,
     );
+    const { data: showDgistSso } = flagsHooks.useFlag<boolean>(
+      ApFlagId.SHOW_DGIST_SSO,
+    );
+    // DGIST SSO 활성 시 로그인 화면에선 이메일 폼을 숨기고 '관리자 로그인' 링크 뒤로 둔다 (일반 구성원 혼동 방지).
+    const hideEmailLogin =
+      (showDgistSso ?? false) &&
+      !isSignUp &&
+      !showCheckYourEmailNote &&
+      !showAdminLogin;
     const data = {
       signin: {
         title: t('Welcome back'),
@@ -231,13 +241,15 @@ const AuthFormTemplate = React.memo(
             onSamlClick={() => setShowSamlLogin(true)}
           />
         )}
-        <AuthSeparator
-          isEmailAuthEnabled={
-            (isEmailAuthEnabled ?? true) && !showCheckYourEmailNote
-          }
-        />
+        {!hideEmailLogin && (
+          <AuthSeparator
+            isEmailAuthEnabled={
+              (isEmailAuthEnabled ?? true) && !showCheckYourEmailNote
+            }
+          />
+        )}
 
-        {isEmailAuthEnabled ? (
+        {!hideEmailLogin && isEmailAuthEnabled ? (
           isSignUp ? (
             <SignUpForm
               setShowCheckYourEmailNote={setShowCheckYourEmailNote}
@@ -248,7 +260,19 @@ const AuthFormTemplate = React.memo(
           )
         ) : null}
 
-        <BottomNote isSignup={isSignUp} />
+        {hideEmailLogin && (
+          <div className="mt-6 text-center">
+            <button
+              type="button"
+              onClick={() => setShowAdminLogin(true)}
+              className="text-[13px] text-muted-foreground hover:underline transition-all duration-200"
+            >
+              {t('Admin login')}
+            </button>
+          </div>
+        )}
+
+        {!hideEmailLogin && <BottomNote isSignup={isSignUp} />}
       </AuthLayout>
     );
   },

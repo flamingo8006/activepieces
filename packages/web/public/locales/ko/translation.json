@@ -1988,5 +1988,6 @@
   "1 hour ago": "1시간 전",
   "{count} hours ago": "{count}시간 전",
   "Sign in with DGIST": "DGIST 계정으로 로그인",
-  "Sign up with DGIST": "DGIST 계정으로 가입"
+  "Sign up with DGIST": "DGIST 계정으로 가입",
+  "Admin login": "관리자 로그인"
 }
