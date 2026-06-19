@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 46" width="220" height="46" role="img" aria-label="AI-Flow, Powered by Activepieces">
+  <!-- 심볼: piece 연결(흐름) 모티프 -->
+  <rect x="3" y="15" width="11" height="11" rx="3.2" fill="#8142E3"/>
+  <rect x="29" y="4" width="11" height="11" rx="3.2" fill="#8142E3" opacity="0.55"/>
+  <rect x="29" y="26" width="11" height="11" rx="3.2" fill="#8142E3"/>
+  <path d="M14 19 C 22 15, 23 9, 29 9" stroke="#8142E3" stroke-width="2.2" fill="none"/>
+  <path d="M14 23 C 22 27, 23 33, 29 33" stroke="#8142E3" stroke-width="2.2" fill="none"/>
+  <!-- 워드마크 -->
+  <text x="52" y="22" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="22" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#8142E3">AI</tspan><tspan fill="#0a0a0a">-Flow</tspan>
+  </text>
+  <!-- Powered by Activepieces (필수 표기) -->
+  <text x="53" y="37" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="9" font-weight="500" fill="#6b7280">
+    Powered by <tspan fill="#8142E3" font-weight="600">Activepieces</tspan>
+  </text>
+</svg>

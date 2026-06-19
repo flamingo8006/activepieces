@@ -54,9 +54,14 @@ export const AppSidebarHeader = () => {
         <div className="w-full flex items-center gap-2">
           <SidebarLogoCollapsed linkTo={defaultRoute} />
           {state !== 'collapsed' && (
-            <h1 className="truncate text-sm font-medium">
-              {branding.websiteName}
-            </h1>
+            <div className="flex flex-col leading-tight min-w-0">
+              <h1 className="truncate text-sm font-medium">
+                {branding.websiteName}
+              </h1>
+              <span className="truncate text-[10px] text-muted-foreground">
+                Powered by Activepieces
+              </span>
+            </div>
           )}
         </div>
       </SidebarHeader>

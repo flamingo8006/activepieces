@@ -158,6 +158,12 @@ export const flagService = (log: FastifyBaseLogger) => ({
                 updated,
             },
             {
+                id: ApFlagId.SHOW_DGIST_SSO,
+                value: system.getBoolean(AppSystemProp.DGIST_SSO_ENABLED) ?? false,
+                created,
+                updated,
+            },
+            {
                 id: ApFlagId.EDITION,
                 value: system.getEdition(),
                 created,

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46 46" width="46" height="46" role="img" aria-label="AI-Flow">
+  <!-- 아이콘: 보라 배경 + 화이트 흐름 심볼 (사이드바·favicon) -->
+  <rect width="46" height="46" rx="11" fill="#8142E3"/>
+  <rect x="6" y="18" width="10" height="10" rx="3" fill="#ffffff"/>
+  <rect x="30" y="7" width="10" height="10" rx="3" fill="#ffffff" opacity="0.6"/>
+  <rect x="30" y="29" width="10" height="10" rx="3" fill="#ffffff"/>
+  <path d="M16 22 C 24 18, 25 12, 30 12" stroke="#ffffff" stroke-width="2.2" fill="none"/>
+  <path d="M16 26 C 24 30, 25 34, 30 34" stroke="#ffffff" stroke-width="2.2" fill="none"/>
+</svg>
