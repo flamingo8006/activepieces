@@ -49,7 +49,7 @@ export const ExploreTemplateCard = React.memo(
                   <TagWithBright
                     key={index}
                     index={index}
-                    prefix={t('Save')}
+                    prefix={t('Saves')}
                     title={tag.title}
                     color={tag.color}
                     size="sm"

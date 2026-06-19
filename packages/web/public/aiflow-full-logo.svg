@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 196 46" width="196" height="46" role="img" aria-label="AI-Flow">
+  <!-- 심볼: piece 연결(흐름) 모티프 -->
+  <rect x="3" y="17" width="12" height="12" rx="3.5" fill="#8142E3"/>
+  <rect x="31" y="4" width="12" height="12" rx="3.5" fill="#8142E3" opacity="0.55"/>
+  <rect x="31" y="30" width="12" height="12" rx="3.5" fill="#8142E3"/>
+  <path d="M15 21 C 24 17, 25 10, 31 10" stroke="#8142E3" stroke-width="2.4" fill="none"/>
+  <path d="M15 25 C 24 29, 25 36, 31 36" stroke="#8142E3" stroke-width="2.4" fill="none"/>
+  <!-- 워드마크 -->
+  <text x="56" y="31" font-family="Inter, -apple-system, 'Segoe UI', sans-serif" font-size="27" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#8142E3">AI</tspan><tspan fill="#0a0a0a">-Flow</tspan>
+  </text>
+</svg>

@@ -166,7 +166,7 @@ const TemplateDetailsPage = ({ template }: TemplateDetailsPageProps) => {
                     <TagWithBright
                       index={index}
                       key={index}
-                      prefix={t('Save')}
+                      prefix={t('Saves')}
                       title={tag.title}
                       color={tag.color}
                       size="sm"
